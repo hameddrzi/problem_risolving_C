@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 bool isPalindrome(int x) {
-    
+    ddd
 }
 
 #define MAX_NUM 50
