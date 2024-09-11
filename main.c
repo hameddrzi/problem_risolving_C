@@ -1,18 +1,25 @@
 //https://leetcode.com/problems/palindrome-number/
 
 #include <stdio.h>
+#include <string.h>
 #include <stdbool.h>
 
-bool isPalindrome(int x) {
-    ddd
+
+bool isPalindrome(int *x) {
+    size_t len = strlen(x);
+    bool palindrome = true;
+    for (size_t i = 0; i < len; ++i) {
+        if(x[i] != x[len - i- 1])
+            palindrome = false;
+    }
+    return palindrome;
 }
 
-#define MAX_NUM 50
-
 int main(){
-    int N[MAX_NUM +1];
-    scanf("%50s", &N );
-    if(isPalindrome(N)){
+    size_t N[10];
+    scanf("%10d", &N);
+    if(isPalindrome(&N)){
         printf("palindrome");
-    }
+    }else
+        printf("NOT palindrome");
 }
