@@ -16,26 +16,33 @@ int main() {
     int matrice2[row2][cols2];
     int i,j;
         if(cols == row2) {
-            for (i = 0; i < row; ++i) {
-                for (j = 0; j < cols; ++j) {
-                    printf("insert 1 Matrice[%d][%d]: \n", i + 1, j + 1);
-                    scanf("%d", &matrice1[i][j]);
+                for (i = 0; i < row; ++i) {
+                    for (j = 0; j < cols; ++j) {
+                        printf("insert 1 Matrice[%d][%d]: \n", i + 1, j + 1);
+                        scanf("%d", &matrice1[i][j]);
+                    }
                 }
-            }
-            for (i = 0; i < row2; ++i) {
-                for (int j = 0; j < cols2; ++j) {
-                    printf("insert 2 Matrice[%d][%d]: \n", i + 1, j + 1);
-                    scanf("%d", &matrice2[i][j]);
+                for (i = 0; i < row2; ++i) {
+                    for (int j = 0; j < cols2; ++j) {
+                        printf("insert 2 Matrice[%d][%d]: \n", i + 1, j + 1);
+                        scanf("%d", &matrice2[i][j]);
+                     }
                 }
-            }
-
-            for (i = 0; i < row; ++i) {
-                for (int j = 0; j < row; ++j) {
-                    for (int k = 0; k <; ++k) {
+                int multi[row][cols2];
+                for (i = 0; i < row; ++i) {
+                    for (int j = 0; j < cols2; ++j) {
+                        for (int k = 0; k <cols; ++k) {
+                            multi[i][j] += matrice1[i][k] * matrice2[k][j];
+                        }
 
                     }
-
                 }
+            for (int i = 0; i < row; ++i) {
+                for (int j = 0; j < cols2; ++j) {
+                    printf("%d ", multi[i][j]);
+                }
+                printf("\n");
             }
+
         }
 }
